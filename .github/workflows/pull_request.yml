@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 12.x
           registry-url: "https://npm.pkg.github.com"
-          scope: "@${{ github.actor }}"
+          scope: "@murshidazher"
 
       - name: Cache node modules
         uses: actions/cache@v2
