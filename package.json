@@ -24,6 +24,7 @@
     "build-single-file": "yarn compile && oclif-dev readme",
     "build": "rm -rf dist && tsc -b && oclif-dev readme && oclif-dev manifest",
     "test": "tsdx test",
+    "pr": "yarn lint:fix",
     "lint": "tsdx lint",
     "lint:fix": "tsdx lint --fix",
     "size": "size-limit",
@@ -46,7 +47,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "yarn pr"
     }
   },
   "oclif": {
