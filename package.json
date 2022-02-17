@@ -70,7 +70,7 @@
     "@size-limit/preset-small-lib": "^4.9.1",
     "@types/node-fetch": "^2.5.10",
     "@vercel/ncc": "0.33.3",
-    "cli-ux": "^5.5.1",
+    "cli-ux": "5.6.7",
     "husky": "^4.3.8",
     "oclif": "^1.16.1",
     "size-limit": "^4.9.1",
