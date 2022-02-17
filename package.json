@@ -1,0 +1,91 @@
+{
+  "name": "@murshidazher/oclif-tsdx-boilerplate",
+  "description": "A simple CLI boilerplate for making lot of things happen.",
+  "author": "Murshid Azher <hello@murshidazher.com>",
+  "version": "0.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/murshidazher/oclif-tsdx-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murshidazher/oclif-tsdx-boilerplate.git"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src",
+    "/oclif.manifest.json"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "ts-node src/start.ts",
+    "compile": "ncc build src/index.ts --no-source-map-register -e @oclif/command -e @oclif/errors",
+    "build-single-file": "yarn compile && oclif-dev readme",
+    "build": "rm -rf dist && tsc -b && oclif-dev readme && oclif-dev manifest",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "lint:fix": "tsdx lint --fix",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "docs": "oclif-dev readme",
+    "version": "yarn build",
+    "typecheck": "tsc --noEmit",
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "yarn build"
+  },
+  "bin": {
+    "ocliftsdx": "./bin/run"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "oclif": {
+    "commands": "./dist/commands",
+    "bin": "ocliftsdx"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/hello.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/hello.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@oclif/config": "^1.17.0",
+    "@oclif/dev-cli": "^1.26.0",
+    "@oclif/errors": "^1.3.4",
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "@types/node-fetch": "^2.5.10",
+    "@vercel/ncc": "0.27.0",
+    "cli-ux": "^5.5.1",
+    "husky": "^4.3.8",
+    "oclif": "^1.16.1",
+    "size-limit": "^4.9.1",
+    "ts-node": "^9.1.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "bn.js": "^5.1.3",
+    "c32check": "^1.1.2",
+    "node-fetch": "^2.6.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
