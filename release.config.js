@@ -10,7 +10,7 @@ module.exports = {
   prepare: [
     {
       path: '@semantic-release/exec',
-      cmd: 'OCLIF_NEXT_VERSION=${nextRelease.version} yarn version',
+      cmd: 'OCLIF_NEXT_VERSION=${nextRelease.version} yarn run version',
     },
     '@semantic-release/changelog',
     '@semantic-release/npm',
