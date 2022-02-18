@@ -1,0 +1,59 @@
+# .github/workflows/pull_request.yml
+
+name: Release
+
+on:
+  pull_request:
+    branches: [main, develop]
+    types: [closed]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci') && github.event.pull_request.merged == true"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare repository
+        run: git fetch --unshallow --tags
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@murshidazher"
+
+      - name: Install deps and build (with cache)
+        uses: bahmutov/npm-install@v1.7.12
+
+      - name: Linting 🧹
+        run: yarn pr
+
+      - name: Build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn build:ncc
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          semantic_version: 16
+          branches: |
+            [
+              '+([0-9])?(.{+([0-9]),x}).x',
+              'main',
+              'next',
+              'next-major',
+              {
+                name: 'beta',
+                prerelease: true
+              },
+              {
+                name: 'alpha',
+                prerelease: true
+              }
+            ]
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
