@@ -1,5 +1,14 @@
-*.log
-.DS_Store
+*-debug.log
+*-error.log
+/.nyc_output
+/dist
+/lib
+/package-lock.json
+/tmp
 node_modules
-dist
-lib
+oclif.manifest.json
+tsconfig.tsbuildinfo
+yarn-error.log
+
+# tarballs
+murshidazher-oclif-tsdx-boilerplate-v*.tgz
