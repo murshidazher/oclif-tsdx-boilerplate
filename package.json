@@ -97,7 +97,7 @@
     "compile": "ncc build src/index.ts --no-source-map-register -e @oclif/core/flush -e @oclif/core/handle --out compiled --license LICENSE",
     "build": "shx rm -f tsconfig.tsbuildinfo && shx rm -rf dist && tsc -b",
     "build:ncc": "yarn compile",
-    "pr": "yarn typecheck && yarn test && yarn lint:fix && yarn stylelint:fix && yarn build",
+    "pr": "yarn typecheck && yarn test && yarn lint:fix && yarn build",
     "lint": "eslint 'src/**/*.{ts,tsx}' --config .eslintrc",
     "lint:fix": "yarn lint --fix",
     "lint:fix:win": "eslint \"src/**/*.{ts,tsx}\" --fix",

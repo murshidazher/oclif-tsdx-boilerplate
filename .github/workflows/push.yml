@@ -48,6 +48,3 @@ jobs:
 
       - name: Lint
         run: yarn pr
-
-      - name: Build
-        run: yarn build
