@@ -2,7 +2,7 @@
   "name": "@murshidazher/oclif-tsdx-boilerplate",
   "description": "A simple CLI boilerplate for making lot of things happen.",
   "author": "Murshid Azher <hello@murshidazher.com> (https://murshidazher.com/)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "homepage": "https://github.com/murshidazher/oclif-tsdx-boilerplate",
   "repository": {
