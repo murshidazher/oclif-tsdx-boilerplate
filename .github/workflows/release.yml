@@ -29,11 +29,12 @@ jobs:
         id: semantic
         with:
           semantic_version: 18.0.1
+          branch: main
           extra_plugins: |
             @semantic-release/git
             @semantic-release/changelog
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Use Node.js 14.x
@@ -54,4 +55,4 @@ jobs:
         run: |
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:refs/heads/v${{steps.semantic.outputs.new_release_major_version}}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
