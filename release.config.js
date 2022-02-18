@@ -18,7 +18,8 @@ module.exports = {
         assets: [
           'docs/CHANGELOG.md',
           'package.json',
-          'compiled/index.js',
+          'dist',
+          'bin',
           'package-lock.json',
         ],
         message:
