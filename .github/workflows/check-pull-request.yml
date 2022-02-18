@@ -21,18 +21,15 @@ jobs:
       - name: Linting and Build Check🧹
         run: yarn pr
 
-      - name: Build
-        run: yarn build:ncc
-
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
         with:
           semantic_version: 18.0.1
+          dry_run: true
           branch: main
           extra_plugins: |
             @semantic-release/git
             @semantic-release/changelog
-          dry_run: true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,6 +1,31 @@
-# [@murshidazher/oclif-tsdx-boilerplate](https://github.com/murshidazher/oclif-tsdx-boilerplate)
+# [oclif-tsdx-boilerplate](https://github.com/murshidazher/oclif-tsdx-boilerplate) [![github](https://img.shields.io/github/v/release/murshidazher/oclif-tsdx-boilerplate?label=&color=0080FF)](https://github.com/murshidazher/oclif-tsdx-boilerplate/releases/latest)
 
-A simple CLI boilerplate for making lot of things happen.
+![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
+
+> A simple oclif-cli boilerplate for making lot of things happen. 🔥
+
+- Zero configuration typescript setup with oclif
+- Automatic trunk-based release pipeline using GitHub Workflow and Semantic Versioning.
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+  - [Development](#development)
+  - [Links](#links)
+  - [Usage](#usage)
+  - [Commands](#commands)
+  - [`ocliftsdx goodbye PERSON`](#ocliftsdx-goodbye-person)
+  - [`ocliftsdx hello PERSON`](#ocliftsdx-hello-person)
+  - [`ocliftsdx hello dump`](#ocliftsdx-hello-dump)
+  - [`ocliftsdx hello world`](#ocliftsdx-hello-world)
+  - [`ocliftsdx help [COMMAND]`](#ocliftsdx-help-command)
+  - [`ocliftsdx plugins`](#ocliftsdx-plugins)
+  - [`ocliftsdx plugins:inspect PLUGIN...`](#ocliftsdx-pluginsinspect-plugin)
+  - [`ocliftsdx plugins:install PLUGIN...`](#ocliftsdx-pluginsinstall-plugin)
+  - [`ocliftsdx plugins:link PLUGIN`](#ocliftsdx-pluginslink-plugin)
+  - [`ocliftsdx plugins:uninstall PLUGIN...`](#ocliftsdx-pluginsuninstall-plugin)
+  - [`ocliftsdx plugins update`](#ocliftsdx-plugins-update)
+  - [LICENSE](#license)
 
 ## Development
 
@@ -27,9 +52,12 @@ To run the executable:
 - [How to publish packages using GitHub Packages](https://javascript.plainenglish.io/publishing-private-npm-packages-using-github-packages-415993cd2da8)
 - [How to use auto to publish GitHub Packages](https://intuit.github.io/auto/docs/build-platforms/github-actions)
 - Use semantic release to release packages like oclif cli.
+- [Add access control and visibility to GitHub Packages](https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility)
 
 ## Usage
+
   <!-- usage -->
+
 ```sh-session
 $ npm install -g @murshidazher/oclif-tsdx-boilerplate
 $ ocliftsdx COMMAND
@@ -41,11 +69,14 @@ USAGE
   $ ocliftsdx COMMAND
 ...
 ```
+
 <!-- usagestop -->
-  
+
 ## Commands
+
   <!-- commands -->
-- [@murshidazher/oclif-tsdx-boilerplate](#murshidazheroclif-tsdx-boilerplate)
+
+- [oclif-tsdx-boilerplate [![github](https://img.shields.io/github/v/release/murshidazher/oclif-tsdx-boilerplate?label=&color=0080FF)](https://github.com/murshidazher/oclif-tsdx-boilerplate/releases/latest)](#oclif-tsdx-boilerplate-)
   - [Development](#development)
   - [Links](#links)
   - [Usage](#usage)
@@ -236,7 +267,7 @@ ALIASES
   $ ocliftsdx plugins add
 
 EXAMPLES
-  $ ocliftsdx plugins:install myplugin 
+  $ ocliftsdx plugins:install myplugin
 
   $ ocliftsdx plugins:install https://github.com/someuser/someplugin
 
@@ -308,6 +339,7 @@ FLAGS
 DESCRIPTION
   Update installed plugins.
 ```
+
 <!-- commandsstop -->
 
 ## LICENSE
