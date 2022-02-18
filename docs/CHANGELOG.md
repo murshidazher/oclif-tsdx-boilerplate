@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/murshidazher/oclif-tsdx-boilerplate/compare/v1.2.0...v1.3.0) (2022-02-18)
+
+
+### Features
+
+* remove @vercel/ncc ([aa42c6f](https://github.com/murshidazher/oclif-tsdx-boilerplate/commit/aa42c6f245091cee7972f925d2b75615c4a1c86c))
+
 # [1.2.0](https://github.com/murshidazher/oclif-tsdx-boilerplate/compare/v1.1.0...v1.2.0) (2022-02-18)
 
 
