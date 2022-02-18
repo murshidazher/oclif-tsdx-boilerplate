@@ -32,5 +32,5 @@ jobs:
       - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1.7.12
 
-      - name: Linting 🧹
+      - name: Linting and Build Check🧹
         run: yarn pr
