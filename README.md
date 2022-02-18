@@ -1,4 +1,4 @@
-# `@murshidazher/oclif-tsdx-boilerplate`
+# [@murshidazher/oclif-tsdx-boilerplate](https://github.com/murshidazher/oclif-tsdx-boilerplate)
 
 A simple CLI boilerplate for making lot of things happen.
 
@@ -45,17 +45,23 @@ USAGE
   
 ## Commands
   <!-- commands -->
-* [`ocliftsdx goodbye PERSON`](#ocliftsdx-goodbye-person)
-* [`ocliftsdx hello PERSON`](#ocliftsdx-hello-person)
-* [`ocliftsdx hello dump`](#ocliftsdx-hello-dump)
-* [`ocliftsdx hello world`](#ocliftsdx-hello-world)
-* [`ocliftsdx help [COMMAND]`](#ocliftsdx-help-command)
-* [`ocliftsdx plugins`](#ocliftsdx-plugins)
-* [`ocliftsdx plugins:inspect PLUGIN...`](#ocliftsdx-pluginsinspect-plugin)
-* [`ocliftsdx plugins:install PLUGIN...`](#ocliftsdx-pluginsinstall-plugin)
-* [`ocliftsdx plugins:link PLUGIN`](#ocliftsdx-pluginslink-plugin)
-* [`ocliftsdx plugins:uninstall PLUGIN...`](#ocliftsdx-pluginsuninstall-plugin)
-* [`ocliftsdx plugins update`](#ocliftsdx-plugins-update)
+- [@murshidazher/oclif-tsdx-boilerplate](#murshidazheroclif-tsdx-boilerplate)
+  - [Development](#development)
+  - [Links](#links)
+  - [Usage](#usage)
+  - [Commands](#commands)
+  - [`ocliftsdx goodbye PERSON`](#ocliftsdx-goodbye-person)
+  - [`ocliftsdx hello PERSON`](#ocliftsdx-hello-person)
+  - [`ocliftsdx hello dump`](#ocliftsdx-hello-dump)
+  - [`ocliftsdx hello world`](#ocliftsdx-hello-world)
+  - [`ocliftsdx help [COMMAND]`](#ocliftsdx-help-command)
+  - [`ocliftsdx plugins`](#ocliftsdx-plugins)
+  - [`ocliftsdx plugins:inspect PLUGIN...`](#ocliftsdx-pluginsinspect-plugin)
+  - [`ocliftsdx plugins:install PLUGIN...`](#ocliftsdx-pluginsinstall-plugin)
+  - [`ocliftsdx plugins:link PLUGIN`](#ocliftsdx-pluginslink-plugin)
+  - [`ocliftsdx plugins:uninstall PLUGIN...`](#ocliftsdx-pluginsuninstall-plugin)
+  - [`ocliftsdx plugins update`](#ocliftsdx-plugins-update)
+  - [LICENSE](#license)
 
 ## `ocliftsdx goodbye PERSON`
 

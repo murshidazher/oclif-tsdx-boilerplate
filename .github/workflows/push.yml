@@ -17,7 +17,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     strategy:
       matrix:
-        node: ['12.x', '14.x']
+        node: ['14.x', '16.x']
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
