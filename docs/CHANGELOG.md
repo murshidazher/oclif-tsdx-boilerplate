@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/murshidazher/oclif-tsdx-boilerplate/compare/v1.1.0...v1.2.0) (2022-02-18)
+
+
+### Features
+
+* trigger a dummy build ([bed3359](https://github.com/murshidazher/oclif-tsdx-boilerplate/commit/bed3359f0137fe0b31b7a8339b41c9be4d88da88))
+
 # [1.1.0](https://github.com/murshidazher/oclif-tsdx-boilerplate/compare/v1.0.0...v1.1.0) (2022-02-18)
 
 
