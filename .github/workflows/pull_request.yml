@@ -4,7 +4,7 @@ name: Release
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, develop]
     types: [closed]
 
 jobs:
@@ -43,10 +43,33 @@ jobs:
       - name: Lint
         run: yarn pr
 
-      - name: Create Release
+      - name: Build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           yarn install --frozen-lockfile
-          yarn build && build:ncc && npx semantic-release
+          yarn build && build:ncc
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          semantic_version: 16
+          branches: |
+            [
+              '+([0-9])?(.{+([0-9]),x}).x',
+              'main',
+              'next',
+              'next-major',
+              {
+                name: 'beta',
+                prerelease: true
+              },
+              {
+                name: 'alpha',
+                prerelease: true
+              }
+            ]
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

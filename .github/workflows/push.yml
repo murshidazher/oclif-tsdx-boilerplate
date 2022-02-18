@@ -1,6 +1,6 @@
 # .github/workflows/push.yml
 
-name: push
+name: CI
 
 on:
   push:
