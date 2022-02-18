@@ -9,6 +9,7 @@ node_modules
 oclif.manifest.json
 tsconfig.tsbuildinfo
 yarn-error.log
+compiled
 
 # tarballs
 murshidazher-oclif-tsdx-boilerplate-v*.tgz

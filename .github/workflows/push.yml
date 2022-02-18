@@ -38,10 +38,7 @@ jobs:
             yarn-deps-${{ hashFiles('yarn.lock') }}
 
       - name: Lint
-        run: yarn lint
-
-      - name: Typecheck
-        run: yarn typecheck
+        run: yarn pr
 
       - name: Build
         run: yarn build

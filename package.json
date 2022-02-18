@@ -14,7 +14,14 @@
     "ocliftsdx": "./bin/run"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "release": {
+    "branches": [
+      { "name": "master" },
+      { "name": "develop", "channel": "beta", "prerelease": "beta" }
+    ]
   },
   "bugs": "https://github.com/murshidazher/oclif-tsdx-boilerplate/issues",
   "dependencies": {
@@ -30,6 +37,7 @@
     "@types/node": "17.0.18",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
+    "@vercel/ncc": "^0.33.3",
     "chai": "4.3.6",
     "eslint": "8.9.0",
     "eslint-config-oclif": "4.0.0",
@@ -40,6 +48,7 @@
     "mocha": "9.2.0",
     "oclif": "2.4.5",
     "prettier": "2.5.1",
+    "semantic-release": "^19.0.2",
     "shx": "0.3.4",
     "ts-node": "10.5.0",
     "tslib": "2.3.1",
@@ -85,16 +94,18 @@
   },
   "scripts": {
     "start": "ts-node src/start.ts",
+    "compile": "ncc build src/index.ts --no-source-map-register -e @oclif/core/flush -e @oclif/core/handle --out compiled --license LICENSE",
     "build": "shx rm -f tsconfig.tsbuildinfo && shx rm -rf dist && tsc -b",
+    "build:ncc": "yarn compile",
     "pr": "yarn typecheck && yarn test && yarn lint:fix && yarn stylelint:fix && yarn build",
     "lint": "eslint 'src/**/*.{ts,tsx}' --config .eslintrc",
     "lint:fix": "yarn lint --fix",
     "lint:fix:win": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
-    "prepack": "yarn build && oclif-dev manifest && oclif readme",
+    "prepack": "yarn build && yarn version",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md",
+    "version": "npx oclif-dev manifest && npx oclif readme",
     "mdlint:fix": "npx markdownlint-cli --ignore _book --ignore node_modules **/*.md",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install"

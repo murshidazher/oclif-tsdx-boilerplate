@@ -35,7 +35,7 @@ $ npm install -g @murshidazher/oclif-tsdx-boilerplate
 $ ocliftsdx COMMAND
 running command...
 $ ocliftsdx (--version)
-@murshidazher/oclif-tsdx-boilerplate/0.0.0 darwin-arm64 node-v14.18.1
+@murshidazher/oclif-tsdx-boilerplate/0.0.0 darwin-arm64 node-v17.0.0
 $ ocliftsdx --help [COMMAND]
 USAGE
   $ ocliftsdx COMMAND

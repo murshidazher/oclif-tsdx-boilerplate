@@ -32,13 +32,7 @@ jobs:
             yarn-deps-${{ hashFiles('yarn.lock') }}
 
       - name: Lint
-        run: yarn lint
-
-      - name: Typecheck
-        run: yarn typecheck
-
-      - name: Build
-        run: yarn build
+        run: yarn pr
 
       - name: Create Release
         env:
@@ -46,4 +40,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           yarn install --frozen-lockfile
-          yarn release
+          yarn build && build:ncc && npx semantic-release
