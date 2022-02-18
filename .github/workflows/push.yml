@@ -29,19 +29,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Cached dependencies
-        uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-            ${{ runner.os }}-
+      - name: Install deps and build (with cache)
+        uses: bahmutov/npm-install@v1.7.12
 
-      - name: Yarn Install if no cache hit
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install
-
-      - name: Lint
+      - name: Linting 🧹
         run: yarn pr

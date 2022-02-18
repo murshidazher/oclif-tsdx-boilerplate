@@ -11,5 +11,8 @@
   "env": {
     "mocha": true,
     "node": true
+  },
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "auto"}]
   }
 }
