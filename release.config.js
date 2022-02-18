@@ -1,27 +1,28 @@
 /* eslint-disable no-template-curly-in-string */
-
 module.exports = {
-  verifyConditions: [
-    '@semantic-release/changelog',
-    '@semantic-release/npm',
-    '@semantic-release/git',
-    '@semantic-release/github',
-  ],
-  prepare: [
-    {
-      path: '@semantic-release/exec',
-      cmd: 'OCLIF_NEXT_VERSION=${nextRelease.version} yarn run version',
-    },
-    '@semantic-release/changelog',
-    '@semantic-release/npm',
-    {
-      path: '@semantic-release/git',
-      assets: ['package.json', 'CHANGELOG.md', 'README.md', 'compiled/index.js', 'docs'],
-      message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
-    },
-  ],
-  publish: [
-    '@semantic-release/npm',
-    '@semantic-release/github',
-  ],
-}
+  "dryRun": false,
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "docs/CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/github",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "docs/CHANGELOG.md",
+          "package.json",
+          "compiled/index.js",
+          "package-lock.json"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ]
+};
