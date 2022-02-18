@@ -1,10 +1,13 @@
-# .github/workflows/pull_request.yml
+# .github/workflows/release.yml
 name: Release
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - main
+    types:
+      - closed
   push:
     branches:
       - main
