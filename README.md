@@ -35,11 +35,13 @@ To run the CLI:
 yarn start ARGS_AND_FLAGS
 ```
 
-This package uses `@vercel/ncc` to package the CLI into a single file. `yarn build` will also automatically update this README.
+To build the files:
 
 ```bash
 yarn build
 ```
+
+Staging will also automatically update this `README` using husky precommit hooks.
 
 To run the executable:
 
@@ -57,42 +59,33 @@ To run the executable:
 ## Usage
 
   <!-- usage -->
-
 ```sh-session
 $ npm install -g @murshidazher/oclif-tsdx-boilerplate
 $ ocliftsdx COMMAND
 running command...
 $ ocliftsdx (--version)
-@murshidazher/oclif-tsdx-boilerplate/0.0.0 darwin-arm64 node-v17.0.0
+@murshidazher/oclif-tsdx-boilerplate/0.0.0 darwin-x64 node-v17.0.0
 $ ocliftsdx --help [COMMAND]
 USAGE
   $ ocliftsdx COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 ## Commands
 
   <!-- commands -->
-
-- [oclif-tsdx-boilerplate [![github](https://img.shields.io/github/v/release/murshidazher/oclif-tsdx-boilerplate?label=&color=0080FF)](https://github.com/murshidazher/oclif-tsdx-boilerplate/releases/latest)](#oclif-tsdx-boilerplate-)
-  - [Development](#development)
-  - [Links](#links)
-  - [Usage](#usage)
-  - [Commands](#commands)
-  - [`ocliftsdx goodbye PERSON`](#ocliftsdx-goodbye-person)
-  - [`ocliftsdx hello PERSON`](#ocliftsdx-hello-person)
-  - [`ocliftsdx hello dump`](#ocliftsdx-hello-dump)
-  - [`ocliftsdx hello world`](#ocliftsdx-hello-world)
-  - [`ocliftsdx help [COMMAND]`](#ocliftsdx-help-command)
-  - [`ocliftsdx plugins`](#ocliftsdx-plugins)
-  - [`ocliftsdx plugins:inspect PLUGIN...`](#ocliftsdx-pluginsinspect-plugin)
-  - [`ocliftsdx plugins:install PLUGIN...`](#ocliftsdx-pluginsinstall-plugin)
-  - [`ocliftsdx plugins:link PLUGIN`](#ocliftsdx-pluginslink-plugin)
-  - [`ocliftsdx plugins:uninstall PLUGIN...`](#ocliftsdx-pluginsuninstall-plugin)
-  - [`ocliftsdx plugins update`](#ocliftsdx-plugins-update)
-  - [LICENSE](#license)
+* [`ocliftsdx goodbye PERSON`](#ocliftsdx-goodbye-person)
+* [`ocliftsdx hello PERSON`](#ocliftsdx-hello-person)
+* [`ocliftsdx hello dump`](#ocliftsdx-hello-dump)
+* [`ocliftsdx hello world`](#ocliftsdx-hello-world)
+* [`ocliftsdx help [COMMAND]`](#ocliftsdx-help-command)
+* [`ocliftsdx plugins`](#ocliftsdx-plugins)
+* [`ocliftsdx plugins:inspect PLUGIN...`](#ocliftsdx-pluginsinspect-plugin)
+* [`ocliftsdx plugins:install PLUGIN...`](#ocliftsdx-pluginsinstall-plugin)
+* [`ocliftsdx plugins:link PLUGIN`](#ocliftsdx-pluginslink-plugin)
+* [`ocliftsdx plugins:uninstall PLUGIN...`](#ocliftsdx-pluginsuninstall-plugin)
+* [`ocliftsdx plugins update`](#ocliftsdx-plugins-update)
 
 ## `ocliftsdx goodbye PERSON`
 
@@ -103,7 +96,7 @@ USAGE
   $ ocliftsdx goodbye [PERSON] -f <value>
 
 ARGUMENTS
-  PERSON  Person to say goodbye to
+  PERSON  Person to say goodbye to when signing off
 
 FLAGS
   -f, --from=<value>  (required) Whom is saying goodbye
@@ -267,7 +260,7 @@ ALIASES
   $ ocliftsdx plugins add
 
 EXAMPLES
-  $ ocliftsdx plugins:install myplugin
+  $ ocliftsdx plugins:install myplugin 
 
   $ ocliftsdx plugins:install https://github.com/someuser/someplugin
 
@@ -339,7 +332,6 @@ FLAGS
 DESCRIPTION
   Update installed plugins.
 ```
-
 <!-- commandsstop -->
 
 ## LICENSE

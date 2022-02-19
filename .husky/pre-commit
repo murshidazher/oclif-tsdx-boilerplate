@@ -1,4 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm test
+yarn pr
+yarn docs
+git add README.md

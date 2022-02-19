@@ -20,7 +20,7 @@ module.exports = {
           'package.json',
           'dist',
           'bin',
-          'package-lock.json',
+          'yarn.lock',
         ],
         message:
           'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',

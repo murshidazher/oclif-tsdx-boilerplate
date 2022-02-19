@@ -18,7 +18,11 @@ goodbye friend from oclif! (./src/commands/goodbye/index.ts)
   };
 
   static args = [
-    { name: 'person', description: 'Person to say goodbye to', required: true },
+    {
+      name: 'person',
+      description: 'Person to say goodbye to when signing off',
+      required: true,
+    },
   ];
 
   async run(): Promise<void> {
