@@ -80,7 +80,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn pr && yarn docs && git add README.md"
+      "pre-commit": "yarn pr; yarn docs; git add README.md;"
     }
   },
   "scripts": {
