@@ -78,11 +78,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn pr; yarn docs; git add README.md;"
-    }
-  },
   "scripts": {
     "start": "ts-node src/start.ts",
     "build": "shx rm -f tsconfig.tsbuildinfo && shx rm -rf dist && tsc -b",
