@@ -64,7 +64,7 @@ $ npm install -g @murshidazher/oclif-tsdx-boilerplate
 $ ocliftsdx COMMAND
 running command...
 $ ocliftsdx (--version)
-@murshidazher/oclif-tsdx-boilerplate/0.0.0 darwin-x64 node-v17.0.0
+@murshidazher/oclif-tsdx-boilerplate/1.3.1 linux-x64 node-v14.19.0
 $ ocliftsdx --help [COMMAND]
 USAGE
   $ ocliftsdx COMMAND
@@ -109,7 +109,7 @@ EXAMPLES
   goodbye friend from oclif! (./src/commands/goodbye/index.ts)
 ```
 
-_See code: [dist/commands/goodbye/index.ts](https://github.com/murshidazher/oclif-tsdx-boilerplate/blob/v0.0.0/dist/commands/goodbye/index.ts)_
+_See code: [dist/commands/goodbye/index.ts](https://github.com/murshidazher/oclif-tsdx-boilerplate/blob/v1.3.1/dist/commands/goodbye/index.ts)_
 
 ## `ocliftsdx hello PERSON`
 
@@ -133,7 +133,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/murshidazher/oclif-tsdx-boilerplate/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/murshidazher/oclif-tsdx-boilerplate/blob/v1.3.1/dist/commands/hello/index.ts)_
 
 ## `ocliftsdx hello dump`
 

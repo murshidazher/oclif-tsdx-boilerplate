@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/murshidazher/oclif-tsdx-boilerplate/compare/v1.3.0...v1.3.1) (2022-02-19)
+
+
+### Bug Fixes
+
+* add composite for tsconfig ([a5924c7](https://github.com/murshidazher/oclif-tsdx-boilerplate/commit/a5924c7a357c454ff3614ff5e3dc26e64c7699b2))
+
 # [1.3.0](https://github.com/murshidazher/oclif-tsdx-boilerplate/compare/v1.2.0...v1.3.0) (2022-02-18)
 
 
