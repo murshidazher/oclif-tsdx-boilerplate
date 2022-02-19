@@ -35,11 +35,13 @@ To run the CLI:
 yarn start ARGS_AND_FLAGS
 ```
 
-This package uses `@vercel/ncc` to package the CLI into a single file. `yarn build` will also automatically update this README.
+To build the files:
 
 ```bash
 yarn build
 ```
+
+Staging will also automatically update this `README` using husky precommit hooks.
 
 To run the executable:
 
