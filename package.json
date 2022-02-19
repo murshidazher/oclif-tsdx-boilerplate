@@ -81,7 +81,7 @@
   "scripts": {
     "start": "ts-node src/start.ts",
     "build": "shx rm -f tsconfig.tsbuildinfo && shx rm -rf dist && tsc -b",
-    "pr": "yarn typecheck && yarn test && yarn lint:fix && yarn build",
+    "pr": "yarn typecheck && yarn test && yarn lint && yarn build",
     "lint": "eslint . --ext .ts --config .eslintrc",
     "lint:fix": "yarn lint --fix",
     "postpack": "shx rm -f oclif.manifest.json",
