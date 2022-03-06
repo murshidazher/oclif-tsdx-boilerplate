@@ -19,7 +19,7 @@
   },
   "bugs": "https://github.com/murshidazher/oclif-tsdx-boilerplate/issues",
   "dependencies": {
-    "@oclif/core": "1.5.1",
+    "@oclif/core": "1.5.2",
     "@oclif/plugin-help": "5.1.11",
     "@oclif/plugin-plugins": "2.1.0"
   },
