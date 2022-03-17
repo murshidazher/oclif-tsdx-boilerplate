@@ -468,10 +468,10 @@
     is-wsl "^2.1.1"
     tslib "^2.3.1"
 
-"@oclif/core@1.5.3":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.5.3.tgz#472e427ba4f6f61cefe877a22b8c73bcfd9bee3e"
-  integrity sha512-m0I74bRXmNqMX1hscxdF5u/Lw0sB+vwoGnycFO2QzOq8jOphRQxYuUoVWPMQFNmVSjgVEShoqxMDxjgoCKsKoQ==
+"@oclif/core@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-1.6.1.tgz#8300132782fd5845e3f08026f2fbd95917e8c2dd"
+  integrity sha512-qB33YT3JUc7oH3Mtoov8yRETdMiQKsQNdoB2ozRq8JOCxtqI2f0XiQ6eqes3GpeMZKucl4mmonws5LYraLdQlg==
   dependencies:
     "@oclif/linewrap" "^1.0.0"
     "@oclif/screen" "^3.0.2"
