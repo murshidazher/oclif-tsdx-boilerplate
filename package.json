@@ -39,7 +39,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "husky": "7.0.4",
     "mocha": "9.2.2",
-    "oclif": "2.6.3",
+    "oclif": "3.6.1",
     "prettier": "2.6.2",
     "shx": "0.3.4",
     "ts-node": "10.7.0",
