@@ -21,7 +21,7 @@
   "dependencies": {
     "@oclif/core": "1.26.1",
     "@oclif/plugin-help": "5.1.12",
-    "@oclif/plugin-plugins": "2.1.0"
+    "@oclif/plugin-plugins": "2.4.7"
   },
   "devDependencies": {
     "@oclif/dev-cli": "1.26.10",
